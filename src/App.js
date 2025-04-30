@@ -1,5 +1,5 @@
 import "./App.css";
-// import ChatBox from "./components/ChatBox";
+import ChatBox from "./components/ChatBox";
 // import Courses from "./components/Courses";
 // import Faqs from "./components/Faqs";
 // import Footer from "./components/Footer";
@@ -11,9 +11,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
+      <ChatBox />
 
       {/* 
-        <ChatBox />
         <Courses />
         <Faqs />
         <Footer /> */}
