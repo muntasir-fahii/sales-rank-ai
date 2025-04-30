@@ -15,8 +15,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className=" fixed top-0 left-0 right-0 w-full z-50">
-      <div className="max-w-7xl container mx-auto lg:py-2  px-4 sm:px-6 lg:px-8">
+    <nav>
+      <div className="max-w-6xl container mx-auto  lg:py-2 ">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-[74px]">
             <div>
@@ -38,7 +38,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <a
               href="#home"
-              className=" text-[#010205] font-manrope font-medium px-6 py-2 rounded-full border-solid border border-[#010205] transition"
+              className=" text-[#010205] font-manrope font-medium px-6 py-2 rounded-full border-solid border border-[#010205] hover:text-white hover:bg-[#010205] transition"
             >
               Get Started
             </a>
