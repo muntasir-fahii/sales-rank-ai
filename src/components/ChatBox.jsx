@@ -41,7 +41,6 @@ const ChatBox = () => {
         ...prev,
         { sender: "bot", text: "Thanks for your message!" },
       ]);
-      // Do not scroll here — user controls position
     }, 500);
   };
 
@@ -54,7 +53,6 @@ const ChatBox = () => {
         ...prev,
         { sender: "bot", text: "Here's more info about that!" },
       ]);
-      // Do not scroll here either
     }, 500);
   };
 

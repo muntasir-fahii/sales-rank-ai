@@ -18,7 +18,7 @@ const Courses = () => {
               View All
             </button>
           </div>
-          {/* Cards */}
+
           <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
             {/* Card */}
             <div className="bg-[#F0F0F0] border border-solid border-[#F1F1F3] lg:w-1/2 p-6 flex flex-col gap-6 rounded-lg">
@@ -58,8 +58,8 @@ const Courses = () => {
                 </button>
               </div>
             </div>
-            {/* Card */}
 
+            {/* Card */}
             <div className="bg-[#F0F0F0] border border-solid border-[#F1F1F3] lg:w-1/2 p-6 flex flex-col gap-6  rounded-lg">
               <div className="w-full h-full rounded-lg">
                 <img

@@ -1,4 +1,5 @@
 import Logo2 from "../assets/Logo2";
+//icons
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { ImLinkedin2 } from "react-icons/im";
 import { BsTelephoneFill } from "react-icons/bs";
@@ -33,7 +34,7 @@ const Footer = () => {
                 <h3 className="font-manrope font-semibold text-2xl">Logo</h3>
               </div>
             </button>
-            <p className="font-manrope text-sm w-1/2 text-[#335386]">
+            <p className="font-manrope text-sm lg:w-1/2 text-[#335386]">
               SalesRank.AI offers a comprehensive suite of AI-powered solutions
               to help you find expert sales professionals who can elevate every
               aspect of your business. From performance rankings and skill
