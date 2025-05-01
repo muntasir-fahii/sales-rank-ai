@@ -29,7 +29,7 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="flex w-[70%] justify-between ">
           <span className=" w-40 font-questrial">

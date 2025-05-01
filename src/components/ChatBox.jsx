@@ -99,7 +99,7 @@ const ChatBox = () => {
                   {msg.sender === "bot" && (
                     <div className="mr-2">
                       <img
-                        src="https://i.pravatar.cc/40?img=12"
+                        src="https://r2.erweima.ai/imgcompressed/compressed_553a5e23bbef42c0204e06f47d98c04b.webp"
                         alt="Bot"
                         className="w-8 h-8 rounded-full"
                       />
