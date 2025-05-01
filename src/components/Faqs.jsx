@@ -31,18 +31,18 @@ const FaqSection = () => {
   return (
     <section className="lg:py-16 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex w-[70%] justify-between ">
+        <div className="flex gap-28">
           <span className=" w-40 font-questrial">
             Frequently asked questions
           </span>
-          <h2 className="text-3xl font-questrial w-[60%] text-center">
+          <h2 className="text-5xl w-[740px] font-questrial">
             Constant collaboration is how we roll. Let's see if we are a good
             fit.
           </h2>
         </div>
 
         {/* Faqs */}
-        <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className=" mx-auto px-4 py-12">
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;

@@ -5,7 +5,7 @@ const Courses = () => {
         <div className="flex flex-col gap-6">
           <div className="flex lg:justify-between items-center">
             <div className="w-full md:w-[70%] flex flex-col gap-4">
-              <h2 className="text-2xl md:text-4xl font-manrope font-medium">
+              <h2 className="text-2xl md:text-4xl font-manrope font-semibold">
                 Our Courses
               </h2>
               <p className="text-[#59595A] font-manrope font-normal text-sm">
@@ -21,7 +21,7 @@ const Courses = () => {
           {/* Cards */}
           <div className="flex justify-center items-center gap-6">
             {/* Card */}
-            <div className="bg-[#F0F0F0] w-1/2 p-6 flex flex-col gap-6 rounded-lg">
+            <div className="bg-[#F0F0F0] border border-solid border-[#F1F1F3] w-1/2 p-6 flex flex-col gap-6 rounded-lg">
               <div className="w-full h-full rounded-lg">
                 <img
                   src="https://res.cloudinary.com/dcgreqowu/image/upload/v1746055024/image_u7eujm.png"
@@ -60,7 +60,7 @@ const Courses = () => {
             </div>
             {/* Card */}
 
-            <div className="bg-[#F0F0F0] w-1/2 p-6 flex flex-col gap-6  rounded-lg">
+            <div className="bg-[#F0F0F0] border border-solid border-[#F1F1F3] w-1/2 p-6 flex flex-col gap-6  rounded-lg">
               <div className="w-full h-full rounded-lg">
                 <img
                   src="https://res.cloudinary.com/dcgreqowu/image/upload/v1746055024/image_u7eujm.png"

@@ -51,9 +51,9 @@ const TestimonialSlider = () => {
 
   return (
     <section className="lg:py16 bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-12">
+      <div className="container max-w-6xl mx-auto px-4 py-12">
         <div className="flex gap-8 flex-col rounded-xl p-6 sm:p-8 transition-all">
-          <p className="text-[#010205] text-xl mb-4">{current.text}</p>
+          <p className="text-[#010205] text-3xl mb-4">{current.text}</p>
           <div className="flex justify-between items-center">
             <div className="flex gap-6 justify-center ite">
               <div>
@@ -87,7 +87,6 @@ const TestimonialSlider = () => {
                   {formatIndex(currentIndex + 1)}
                 </span>
                 <span style={{ color: "#01020566" }}>
-                  {" "}
                   / {formatIndex(total)}
                 </span>
               </span>

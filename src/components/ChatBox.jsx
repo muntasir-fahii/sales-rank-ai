@@ -63,9 +63,9 @@ const ChatBox = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE] lg:py-16 h-full">
+    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE] px-5 lg:px-0 py-10 lg:py-16 h-full">
       <div className="container mx-auto max-w-6xl flex flex-col gap-10">
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col text-center lg:text-start gap-2">
           <p className="font-questrial text-[#FCE38A] text-base">
             Live AI Coach
           </p>
@@ -75,8 +75,8 @@ const ChatBox = () => {
         </div>
 
         {/* Chat Box */}
-        <div className="flex h-full items-center gap-6">
-          <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg flex flex-col h-[450px]">
+        <div className="flex flex-col lg:flex-row h-full items-center gap-6">
+          <div className="w-full max-w-2xl bg-white border border-solid border-[#CDCDCD] shadow-lg rounded-lg flex flex-col h-[450px]">
             {/* Header */}
             <div className="bg-white text-[#1B1B1B] px-4 py-3 rounded-t-lg">
               <h2 className="text-lg font-semibold font-manrope">
@@ -125,7 +125,7 @@ const ChatBox = () => {
                 <button
                   key={idx}
                   onClick={() => handleSuggestionClick(text)}
-                  className="bg-[#00286814] text-xs px-3 py-1 rounded-full hover:bg-gray-300 transition"
+                  className="bg-[#00286814] text-xs text-[#002868] px-3 py-1 rounded-full hover:bg-gray-300 transition"
                 >
                   {text}
                 </button>
@@ -133,7 +133,10 @@ const ChatBox = () => {
             </div>
 
             {/* Input */}
-            <form onSubmit={handleSend} className="p-3 border-t flex gap-2">
+            <form
+              onSubmit={handleSend}
+              className="p-3 border-t flex flex-col lg:flex-row gap-2"
+            >
               <input
                 type="text"
                 className="flex-1 font-manrope px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#002868]"
@@ -154,7 +157,7 @@ const ChatBox = () => {
           </div>
 
           {/* Icons */}
-          <div className="bg-[#F2F3F3] flex flex-col gap-8 py-4 px-4 rounded-full">
+          <div className="bg-[#F2F3F3] flex lg:flex-col  gap-8 py-4 px-4 rounded-full">
             <span className="text-xl">
               <TfiReload />
             </span>
@@ -172,7 +175,7 @@ const ChatBox = () => {
             </span>
           </div>
 
-          <div className="flex flex-col h-[450px] gap-6">
+          <div className="flex flex-col h-[450px] px-5 lg:px-0 gap-6">
             <div className="up bg-[#EFEFEF] p-6 rounded-lg flex flex-col gap-4">
               <h3 className="text-2xl font-manrope font-medium">
                 Real-time Analysis
@@ -182,7 +185,9 @@ const ChatBox = () => {
                   <span className="text-[#06B217]">
                     <IoIosCheckmarkCircle />
                   </span>
-                  <p className="font-manrope text-base">Confidence Level</p>
+                  <p className="font-manrope text-base font-medium">
+                    Confidence Level
+                  </p>
                 </div>
                 <div className="flex items-center gap-1">
                   <span>
@@ -196,7 +201,9 @@ const ChatBox = () => {
                   <span className="text-[#002868]">
                     <AiOutlineStock />
                   </span>
-                  <p className="font-manrope text-base">Confidence Level</p>
+                  <p className="font-manrope text-base font-medium">
+                    Confidence Level
+                  </p>
                 </div>
                 <div className="flex items-center gap-1">
                   <p className="text-[#909090] text-sm font-lato">
@@ -210,7 +217,7 @@ const ChatBox = () => {
                 Quick Actions
               </h3>
 
-              <div className="flex  items-center gap-6">
+              <div className="flex items-center gap-6">
                 <div className=" bg-white flex flex-col gap-2 p-2 rounded-lg w-full">
                   <span className="text-[#002868] text-2xl">
                     <PiFilmScriptFill />
@@ -219,7 +226,7 @@ const ChatBox = () => {
                     Generate Script
                   </p>
                 </div>
-                <div className=" bg-white flex flex-col gap-2 p-2 rounded-lg w-full">
+                <div className=" bg-white flex flex-col gap-2 p-3 rounded-lg w-full">
                   <span className="text-[#002868] text-2xl">
                     <BiSolidMessageSquareDetail />
                   </span>

@@ -14,11 +14,13 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="max-w-6xl container mx-auto  lg:py-2 ">
+      <div className="max-w-6xl container mx-auto px-5 lg:px-0 lg:py-2 ">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-[74px]">
             <div>
-              <Logo />
+              <button href="#">
+                <Logo />
+              </button>
             </div>
             <div className="hidden md:flex space-x-[33px]">
               {navigation.map((item) => (
