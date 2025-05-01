@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Load from "../assets/Load";
 
 // Icons
 import { FaArrowUp } from "react-icons/fa6";
 import { TfiReload } from "react-icons/tfi";
-import { BiLike, BiDislike } from "react-icons/bi";
+import { BiLike, BiDislike, BiSolidMessageSquareDetail } from "react-icons/bi";
 import { FiClipboard } from "react-icons/fi";
 import { HiOutlineSpeakerWave } from "react-icons/hi2";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import { BiSolidMessageSquareDetail } from "react-icons/bi";
 import { AiOutlineStock } from "react-icons/ai";
 import { PiFilmScriptFill } from "react-icons/pi";
 
@@ -29,66 +28,62 @@ const ChatBox = () => {
     "Negotiation tips",
   ];
 
-  useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
   const handleSend = (e) => {
     e.preventDefault();
     if (input.trim() === "") return;
 
-    const newMessage = { sender: "user", text: input.trim() };
-    setMessages([...messages, newMessage]);
+    const userMessage = { sender: "user", text: input.trim() };
+    setMessages((prev) => [...prev, userMessage]);
+    setInput("");
 
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: "Thanks for your message!" },
       ]);
+      // Do not scroll here — user controls position
     }, 500);
-
-    setInput("");
   };
 
   const handleSuggestionClick = (text) => {
     const newMessage = { sender: "user", text };
-    setMessages([...messages, newMessage]);
+    setMessages((prev) => [...prev, newMessage]);
 
     setTimeout(() => {
       setMessages((prev) => [
         ...prev,
         { sender: "bot", text: "Here's more info about that!" },
       ]);
+      // Do not scroll here either
     }, 500);
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE] px-5 lg:px-0 py-10 lg:py-16 h-full">
+    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE] px-5 lg:px-0 py-10 lg:py-16">
       <div className="container mx-auto max-w-6xl flex flex-col gap-10">
         <div className="flex flex-col text-center lg:text-start gap-2">
           <p className="font-questrial text-[#FCE38A] text-base">
             Live AI Coach
           </p>
           <h2 className="text-3xl md:text-5xl text-white font-questrial">
-            Take a Suggestion Coaching{" "}
+            Take a Suggestion Coaching
           </h2>
         </div>
 
-        {/* Chat Box */}
-        <div className="flex flex-col lg:flex-row h-full items-center gap-6">
-          <div className="w-full max-w-2xl bg-white border border-solid border-[#CDCDCD] shadow-lg rounded-lg flex flex-col h-[450px]">
-            {/* Header */}
+        <div className="flex flex-col lg:flex-row h-full items-center gap-4">
+          <div
+            className="flex-1 px-4 py-2 bg-[#F2F3F3] rounded-lg flex flex-col"
+            style={{ height: "450px" }}
+          >
+            {/* Chat Header */}
             <div className="bg-white text-[#1B1B1B] px-4 py-3 rounded-t-lg">
               <h2 className="text-lg font-semibold font-manrope">
                 AI Sales Coach
               </h2>
             </div>
 
-            {/* Messages */}
-            <div
-              className="flex-1 overflow-y-auto px-4 py-2 space-y-4 bg-[#F2F3F3]"
-              style={{ overscrollBehavior: "contain" }}
-            >
+            {/* Chat Messages Area */}
+            <div className="flex-1 overflow-y-auto px-4 py-2 space-y-4 bg-[#F2F3F3]">
               {messages.map((msg, index) => (
                 <div
                   key={index}
@@ -120,22 +115,22 @@ const ChatBox = () => {
             </div>
 
             {/* Suggestions */}
-            <div className="px-3 py-2 border-t bg-white flex flex-wrap gap-2">
+            <div className="px-3 py-2 border-t bg-white flex flex-wrap gap-2 rounded-b-md">
               {suggestions.map((text, idx) => (
                 <button
                   key={idx}
                   onClick={() => handleSuggestionClick(text)}
-                  className="bg-[#00286814] text-xs text-[#002868] px-3 py-1 rounded-full hover:bg-gray-300 transition"
+                  className="bg-[#00286814] text-xs text-[#002868] px-2 py-1 rounded-full hover:bg-gray-300 transition"
                 >
                   {text}
                 </button>
               ))}
             </div>
 
-            {/* Input */}
+            {/* Input Form */}
             <form
               onSubmit={handleSend}
-              className="p-3 border-t flex flex-col lg:flex-row gap-2"
+              className="p-3 border-t flex flex-col lg:flex-row gap-2 bg-white"
             >
               <input
                 type="text"
@@ -148,16 +143,13 @@ const ChatBox = () => {
                 type="submit"
                 className="bg-[#002868] text-white px-4 flex justify-center items-center gap-2 py-2 rounded-lg font-geist hover:bg-black transition"
               >
-                Send
-                <span>
-                  <FaArrowUp />
-                </span>
+                Send <FaArrowUp />
               </button>
             </form>
           </div>
 
           {/* Icons */}
-          <div className="bg-[#F2F3F3] flex lg:flex-col  gap-8 py-4 px-4 rounded-full">
+          <div className="bg-[#F2F3F3] flex lg:flex-col gap-8 py-4 px-4 rounded-full">
             <span className="text-xl">
               <TfiReload />
             </span>
@@ -175,12 +167,13 @@ const ChatBox = () => {
             </span>
           </div>
 
-          <div className="flex flex-col h-[450px] px-5 lg:px-0 gap-6">
+          {/* Sidebar */}
+          <div className="flex flex-col h-full lg:h-[450px] px-5 lg:px-0 gap-4">
             <div className="up bg-[#EFEFEF] p-6 rounded-lg flex flex-col gap-4">
-              <h3 className="text-2xl font-manrope font-medium">
+              <h3 className="text-xl lg:text-2xl font-manrope font-medium">
                 Real-time Analysis
               </h3>
-              <div className=" bg-white flex flex-col gap-4 p-2 rounded-lg">
+              <div className="bg-white flex flex-col gap-4 p-2 rounded-lg">
                 <div className="flex items-center gap-1">
                   <span className="text-[#06B217]">
                     <IoIosCheckmarkCircle />
@@ -196,7 +189,7 @@ const ChatBox = () => {
                   <p className="text-[#6D6D6D] text-xs">60%</p>
                 </div>
               </div>
-              <div className=" bg-white flex flex-col gap-4 p-2 rounded-lg">
+              <div className="bg-white flex flex-col gap-4 p-2 rounded-lg">
                 <div className="flex items-center gap-1">
                   <span className="text-[#002868]">
                     <AiOutlineStock />
@@ -213,12 +206,11 @@ const ChatBox = () => {
               </div>
             </div>
             <div className="up bg-[#EFEFEF] p-6 rounded-lg flex flex-col gap-4">
-              <h3 className="text-2xl font-manrope font-medium">
+              <h3 className="text-xl lg:text-2xl font-manrope font-medium">
                 Quick Actions
               </h3>
-
               <div className="flex items-center gap-6">
-                <div className=" bg-white flex flex-col gap-2 p-2 rounded-lg w-full">
+                <div className="bg-white flex flex-col gap-2 p-2 rounded-lg w-full">
                   <span className="text-[#002868] text-2xl">
                     <PiFilmScriptFill />
                   </span>
@@ -226,7 +218,7 @@ const ChatBox = () => {
                     Generate Script
                   </p>
                 </div>
-                <div className=" bg-white flex flex-col gap-2 p-3 rounded-lg w-full">
+                <div className="bg-white flex flex-col gap-2 p-3 rounded-lg w-full">
                   <span className="text-[#002868] text-2xl">
                     <BiSolidMessageSquareDetail />
                   </span>

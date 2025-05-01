@@ -50,17 +50,19 @@ const TestimonialSlider = () => {
   const formatIndex = (num) => String(num).padStart(2, "0");
 
   return (
-    <section className="lg:py16 bg-white">
+    <section className="px-5 lg:px-0 py-10 lg:py-16">
       <div className="container max-w-6xl mx-auto px-4 py-12">
         <div className="flex gap-8 flex-col rounded-xl p-6 sm:p-8 transition-all">
-          <p className="text-[#010205] text-3xl mb-4">{current.text}</p>
-          <div className="flex justify-between items-center">
+          <p className="text-[#010205] h-64 lg:h-40 text-xl lg:text-3xl mb-4">
+            {current.text}
+          </p>
+          <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-4">
             <div className="flex gap-6 justify-center ite">
               <div>
                 <img
                   src={current.image}
                   alt={current.name}
-                  className="w-14 h-14 rounded-full"
+                  className="w-10 lg:w-14 h-10 lg:h-14 rounded-full"
                 />
               </div>
 
@@ -68,7 +70,7 @@ const TestimonialSlider = () => {
                 <h4 className="text-lg font-manrope font-semibold text-[#010205]">
                   {current.name}
                 </h4>
-                <p className="text-sm text-[#878C91]">{current.title}</p>
+                <p className="text-base text-[#878C91]">{current.title}</p>
               </div>
             </div>
 

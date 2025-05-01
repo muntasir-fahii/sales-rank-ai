@@ -29,13 +29,13 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="lg:py-16 bg-white">
+    <section className="px-5 lg:px-0 py-10 lg:py-16 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex gap-28">
+        <div className="flex flex-col lg:flex-row gap-28">
           <span className=" w-40 font-questrial">
             Frequently asked questions
           </span>
-          <h2 className="text-5xl w-[740px] font-questrial">
+          <h2 className="text-2xl lg:text-5xl lg:w-[740px] font-questrial">
             Constant collaboration is how we roll. Let's see if we are a good
             fit.
           </h2>
@@ -59,7 +59,7 @@ const FaqSection = () => {
                       <span className="text-[#8B7D4C] font-questrial text-lg font-semibold">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <span className="text-2xl font-questrial text-black">
+                      <span className="text-xl lg:text-2xl font-questrial text-black">
                         {faq.question}
                       </span>
                     </div>

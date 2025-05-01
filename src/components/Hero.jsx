@@ -13,7 +13,7 @@ const Hero = () => {
               alt="Support"
               className="w-[200px] h-[184px]"
             />
-            <p className="text-[#05131DB2] font-manrope text-base w-72">
+            <p className="text-[#05131DB2] font-manrope text-lg w-72">
               Get real-time coaching, script suggestions, and deal-closing
               strategies powered by advanced AI technology.
             </p>
@@ -30,7 +30,7 @@ const Hero = () => {
                 <h4 className="text-2xl text-[#00245F] font-manrope font-semibold">
                   2000+
                 </h4>
-                <p className="font-manrope text-sm text-[#05131DB2]">
+                <p className="font-manrope text-base text-[#05131DB2]">
                   Your protection
                 </p>
               </div>
@@ -45,7 +45,7 @@ const Hero = () => {
                 <h4 className="text-2xl text-[#00245F] font-manrope font-semibold">
                   7001+
                 </h4>
-                <p className="font-manrope text-sm text-[#05131DB2]">
+                <p className="font-manrope text-base text-[#05131DB2]">
                   Provide tailored
                 </p>
               </div>

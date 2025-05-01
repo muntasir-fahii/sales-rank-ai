@@ -7,23 +7,23 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="lg:py-10">
-      <div className="container mx-auto max-w-6xl flex flex-col justify-between  gap-10">
-        <div className="up bg-gradient-to-r from-[#103570] to-[#004FCE] lg:py-16 h-full flex flex-col justify-center items-center gap-4 rounded-2xl text-center">
+    <footer className="py-10 px-5 lg:px-0 lg:py-16">
+      <div className="container mx-auto max-w-6xl flex flex-col justify-between gap-10">
+        <div className="up bg-gradient-to-r from-[#103570] to-[#004FCE] py-6 lg:py-16 h-full flex flex-col justify-center items-center gap-4 rounded-2xl text-center">
           <div className="flex flex-col gap-2">
-            <h3 className="text-3xl text-white font-manrope ">
+            <h3 className=" text-xl lg:text-3xl text-white font-manrope ">
               Ready to Hire Smarter?
             </h3>
             <p className="text-xs font-manrope text-[#B9BDC7]">
               Unlock Exclusive Insights Subscribe to Our Newsletter
             </p>
           </div>
-          <button className="bg-[#FCE38A] text-[#00245F] text-xs py-3 px-4 rounded-full hover:bg-[#00245F] hover:text-[#FCE38A] transition">
+          <button className="bg-[#FCE38A] text-[#00245F] text-xs py-1 lg:py-3 px-2 lg:px-4 rounded-full hover:bg-[#00245F] hover:text-[#FCE38A] transition">
             Join Now
           </button>
         </div>
 
-        <div className="lg:py-10 bottom flex justify-between">
+        <div className="py-6 lg:py-10 bottom flex flex-col lg:flex-row justify-between gap-4">
           <div className="left flex flex-col gap-4">
             <button href="#">
               <div className="flex items-center gap-2">
@@ -33,7 +33,7 @@ const Footer = () => {
                 <h3 className="font-manrope font-semibold text-2xl">Logo</h3>
               </div>
             </button>
-            <p className="font-manrope text-xs w-1/2 text-[#335386]">
+            <p className="font-manrope text-sm w-1/2 text-[#335386]">
               SalesRank.AI offers a comprehensive suite of AI-powered solutions
               to help you find expert sales professionals who can elevate every
               aspect of your business. From performance rankings and skill
@@ -57,24 +57,24 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="right grid grid-cols-2 lg:grid-cols-3 justify-between w-full">
+          <div className="right grid grid-cols-2 lg:grid-cols-3 justify-between w-full gap-2">
             <div className="flex flex-col gap-2 items-start justify-between">
               <p className="font-manrope font-medium text-base text-[#001C4A]">
                 Navigation
               </p>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Service
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Agency
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Case Study
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Resource
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Contact
               </button>
             </div>
@@ -83,13 +83,13 @@ const Footer = () => {
               <p className="font-manrope font-medium text-base text-[#001C4A]">
                 Licence
               </p>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Privacy Policy
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Copyright
               </button>
-              <button className="font-manrope text-xs text-[#335386] hover:underline">
+              <button className="font-manrope text-sm text-[#335386] hover:underline">
                 Email Address
               </button>
             </div>
@@ -102,7 +102,7 @@ const Footer = () => {
                 <span className="text-[#002868]">
                   <BsTelephoneFill />
                 </span>
-                <button className="font-manrope text-xs text-[#335386] hover:underline">
+                <button className="font-manrope text-sm text-[#335386] hover:underline">
                   (406) 555-0120
                 </button>
               </div>
@@ -110,7 +110,7 @@ const Footer = () => {
                 <span className="text-[#002868]">
                   <IoMdMail />
                 </span>
-                <button className="font-manrope text-xs text-[#335386] hover:underline">
+                <button className="font-manrope text-sm text-[#335386] hover:underline">
                   Hey@boostim.com
                 </button>
               </div>
