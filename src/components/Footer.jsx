@@ -24,7 +24,7 @@ const Footer = () => {
           </button>
         </div>
 
-        <div className="py-6 lg:py-10 bottom flex flex-col lg:flex-row justify-between gap-4">
+        <div className="py-6 lg:py-10 bottom flex flex-col lg:flex-row justify-between gap-8">
           <div className="left flex flex-col gap-4">
             <button href="#">
               <div className="flex items-center gap-2">

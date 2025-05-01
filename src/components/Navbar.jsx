@@ -62,7 +62,7 @@ const Navbar = () => {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-white shadow-md">
+        <div className="md:hidden bg-[#fafafa] shadow-md rounded-lg transition">
           <div className="px-2 pt-2 pb-4 space-y-3">
             {navigation.map((item) => (
               <a

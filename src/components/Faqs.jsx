@@ -31,7 +31,7 @@ const FaqSection = () => {
   return (
     <section className="px-5 lg:px-0 py-10 lg:py-16 bg-white">
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col lg:flex-row gap-28">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-28">
           <span className=" w-40 font-questrial">
             Frequently asked questions
           </span>

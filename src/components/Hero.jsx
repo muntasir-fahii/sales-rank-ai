@@ -3,7 +3,7 @@ const Hero = () => {
     <section className="py-10 px-5 lg:px-0 lg:py-16">
       <div className="container mx-auto max-w-6xl flex flex-col-reverse lg:flex-row items-center justify-center gap-20">
         <div className="w-full md:w-1/2 flex flex-col gap-9 h-full">
-          <h1 className="text-2xl text-center md:text-start md:text-7xl font-manrope md:w-[460px]">
+          <h1 className="text-5xl text-center md:text-start md:text-7xl font-manrope md:w-[460px]">
             Your AI-Powered Sales Coach
           </h1>
           <div className="grid lg:grid-cols-2 justify-center md:justify-normal md:w-[90%] items-center">

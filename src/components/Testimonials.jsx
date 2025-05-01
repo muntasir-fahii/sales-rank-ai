@@ -50,8 +50,8 @@ const TestimonialSlider = () => {
   const formatIndex = (num) => String(num).padStart(2, "0");
 
   return (
-    <section className="px-5 lg:px-0 py-10 lg:py-16">
-      <div className="container max-w-6xl mx-auto px-4 py-12">
+    <section className="px-5 lg:px-0 py-5 lg:py-16">
+      <div className="container max-w-6xl mx-auto px-4 py-8">
         <div className="flex gap-8 flex-col rounded-xl p-6 sm:p-8 transition-all">
           <p className="text-[#010205] h-64 lg:h-40 text-xl lg:text-3xl mb-4">
             {current.text}
