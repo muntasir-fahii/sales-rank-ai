@@ -1,5 +1,3 @@
-import "../styles/Navbar.css";
-
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "../assets/Logo.jsx";

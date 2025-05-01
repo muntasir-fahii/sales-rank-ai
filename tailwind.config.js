@@ -13,6 +13,7 @@ module.exports = {
         questrial: ["Questrial"],
         geist: ["Geist"],
         lato: ["Lato"],
+        inter: ["Inter"],
       },
     },
   },

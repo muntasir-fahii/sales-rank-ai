@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
-    <section className="container mx-auto max-w-6xl lg:py-16">
-      <div className="  flex flex-col-reverse  md:flex-row items-center justify-center gap-20">
+    <section className=" lg:py-16">
+      <div className=" container mx-auto max-w-6xl flex flex-col-reverse  md:flex-row items-center justify-center gap-20">
         {/* left Side: Headline, Text, Ratings, Image */}
         <div className="w-full md:w-1/2 flex flex-col gap-9 h-full">
           <h1 className="text-4xl md:text-7xl font-manrope w-[460px]">

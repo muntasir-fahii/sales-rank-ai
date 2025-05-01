@@ -63,8 +63,8 @@ const ChatBox = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE]">
-      <div className="container mx-auto max-w-6xl lg:py-16 flex flex-col gap-10">
+    <section className="bg-gradient-to-r from-[#103570] to-[#004FCE] lg:py-16 h-full">
+      <div className="container mx-auto max-w-6xl flex flex-col gap-10">
         <div className="flex flex-col gap-2">
           <p className="font-questrial text-[#FCE38A] text-base">
             Live AI Coach
@@ -75,7 +75,7 @@ const ChatBox = () => {
         </div>
 
         {/* Chat Box */}
-        <div className="flex  h-full  items-center gap-6">
+        <div className="flex h-full items-center gap-6">
           <div className="w-full max-w-2xl bg-white shadow-lg rounded-lg flex flex-col h-[450px]">
             {/* Header */}
             <div className="bg-white text-[#1B1B1B] px-4 py-3 rounded-t-lg">
@@ -85,7 +85,10 @@ const ChatBox = () => {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto px-4 py-2 space-y-4 bg-[#F2F3F3]">
+            <div
+              className="flex-1 overflow-y-auto px-4 py-2 space-y-4 bg-[#F2F3F3]"
+              style={{ overscrollBehavior: "contain" }}
+            >
               {messages.map((msg, index) => (
                 <div
                   key={index}
@@ -96,7 +99,7 @@ const ChatBox = () => {
                   {msg.sender === "bot" && (
                     <div className="mr-2">
                       <img
-                        src="https://i.pravatar.cc/40?img=12" // Replace with your bot icon or use an emoji
+                        src="https://i.pravatar.cc/40?img=12"
                         alt="Bot"
                         className="w-8 h-8 rounded-full"
                       />
